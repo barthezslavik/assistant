@@ -6,6 +6,7 @@ function start() {
             fill('#dot_account_us_dot','1231231');
         case '/join_by_dot_number':
         case '/registrations/company_info':
+            select('#company_forms_company_info_create_form_state',   "Arizona");
             fill('#company_forms_company_info_create_form_name',      "Company Name");
             fill('#company_forms_company_info_create_form_address_1', "Address");
             fill('#company_forms_company_info_create_form_city',      'City');
@@ -33,13 +34,20 @@ function start() {
 }
 
 function fill(selector, value) {
-    input = document.querySelector(selector);
+    var input = document.querySelector(selector);
     input.value = value
 }
 
 function click(selector) {
-    element = document.querySelector(selector);
+    var element = document.querySelector(selector);
     element.click()
+}
+
+function select(selector, value) {
+    var select = document.querySelector(selector);
+    select.value = value;
+    var event = new Event("chosen:updated");
+    select.dispatchEvent(event);
 }
 
 chrome.runtime.sendMessage({
