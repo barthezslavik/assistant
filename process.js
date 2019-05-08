@@ -28,6 +28,11 @@ function start() {
             fill('#driver_lead_info_last_name',     'Last name');
             fill('#driver_lead_info_primary_phone', '1-202-555-0131');
             fill('#driver_lead_info_email_address', 'lead@gmail.com');
+        case '/users/home':
+            fill('#applicant_first_name',                 'First name');
+            fill('#applicant_last_name',                  'Last name');
+            fill('#applicant_phones_attributes_0_number', '1-202-555-0131');
+            fill('#applicant_email_address',              'lead@gmail.com');
         default:
             console.log(location.pathname)
     }
