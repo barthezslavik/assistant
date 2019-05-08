@@ -36,6 +36,12 @@ function start() {
         default:
             console.log(location.pathname)
     }
+    if(location.pathname.match(/driver|short/g).length == 2) {
+        fill('#driver_lead_info_first_name',    'First name');
+        fill('#driver_lead_info_last_name',     'Last name');
+        fill('#driver_lead_info_primary_phone', '1-202-555-0131');
+        fill('#driver_lead_info_email_address', 'lead@gmail.com');s
+    }
 }
 
 function fill(selector, value) {
