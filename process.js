@@ -33,6 +33,11 @@ function start() {
             fill('#applicant_last_name',                  'Last name');
             fill('#applicant_phones_attributes_0_number', '1-202-555-0131');
             fill('#applicant_email_address',              'lead@gmail.com');
+        case '/settings/users':
+            fill('#user_user_info_attributes_first_name',   'First name');
+            fill('#user_user_info_attributes_last_name',    'Last name');
+            fill('#user_user_info_attributes_email',        'user_info@gmail.com');
+            fill('#user_user_info_attributes_phone_number', '1-202-551-0131');
         default:
             console.log(location.pathname)
     }
